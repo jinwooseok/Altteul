@@ -24,7 +24,6 @@ public class RedissonConfig {
 	public RedissonClient redissonClient() {
 		RedissonClient redisson = null;
 		Config config = new Config();
-		System.out.println("레디스 비밀번호 입력? -------- "+password);
 		config.useSingleServer()
 			.setAddress(REDISSON_HOST_PREFIX + host + ":" + port)
 			.setPassword(password);
